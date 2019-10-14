@@ -9,18 +9,21 @@ header {
 
 /* PARKS LIST  */
 .parks-list {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0 1%;
+  box-sizing: border-box;
 }
 
 /* PARK  */
 .park {
   box-sizing: border-box;
-  width: 30%;
+  width: 15%;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  font-size: .75rem;
 }
 
 .park:hover {
@@ -29,7 +32,7 @@ header {
 
 .park img {
   width: 100%;
-  max-height: 250px;
+  max-height: 75px;
   object-fit: cover;
 }
 
@@ -51,12 +54,9 @@ header {
 .close-modal {
   position: absolute;
   top: 11%;
-  right: 11%;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: red;
-  color: white;
+  right: 9.5%;
+  width: 30px;
+  height: 30px;
 }
 
 .close-modal:hover {
@@ -64,6 +64,7 @@ header {
 }
 
 .park-details {
+  padding: 20px;
   width: 80%;
   height: 80%;
   background: #eaeaea;
@@ -71,11 +72,19 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-.park-details img {
-  max-width: 90%;
-  max-height: 70%;
-}
-
 .park-details p {
   margin: 0;
+}
+
+.photos {
+  max-width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photos img {
+  max-width: 90%;
+  max-height: 70%;
 }

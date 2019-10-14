@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Photos from './Photos';
+
+import cancel from '../assets/cancel.svg';
+
 const ParkDetails = ({ park, closeModal }) => {
   return (
     park &&
@@ -8,12 +12,11 @@ const ParkDetails = ({ park, closeModal }) => {
         <div
           className="close-modal"
           onClick={closeModal}
-        >X</div>
+        ><img src={cancel} /></div>
         <h2>{park.name}</h2>
-        <img src={park.image_url} alt={park.name} />
-        <p>{park.location.address1}</p>
-        <p>{park.location.city}, {park.location.state}</p>
-        <p>{park.location.zip_code}</p>
+        <Photos photos={park.photos} />
+        <p>{park.location.display_address[0]}</p>
+        <p>{park.location.display_address[1]}</p>
         <p>Rating: {park.rating}</p>
       </div>
     </div>

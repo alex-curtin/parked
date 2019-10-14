@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Search from "./components/Search";
 import ParkDetails from "./components/ParkDetails";
 
-import { getParks } from "./services/api";
+import { getParks, getParkDetails } from "./services/api";
 import ParksList from "./components/ParksList";
 
 class App extends React.Component {
@@ -22,7 +22,8 @@ class App extends React.Component {
     this.setState({ parks });
   }
 
-  selectPark = (park) => {
+  selectPark = async (id) => {
+    const park = await getParkDetails(id);
     this.setState({
       selected: park,
     })
